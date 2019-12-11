@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #f4f6f9;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Nunito", "Segoe UI", arial;
+  color: #6c757d; 
+}
+
+.appWrap{
+  
+header{
+  display: flex;
+  position: sticky;
+  top:0;
+  width: 100%;
+  background-color: rgb(255, 176, 73);
+  .icon-sidebar{
+    padding: 10px;
+    .bars {
+      width: 25px;
+      height: 2px;
+      background-color: black;
+      margin: 5px 0;
+    }
+  }
+  .search-input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1;
+  
+    input[type=text]{
+      width: 100%;
+      padding: 4px 10px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  }
+  .icon-left{
+    padding: 10px;
+  }
+}
+
+.content-wrapper{
+  display: flex;
+  flex-flow: column;
+  background-color: white;
+  margin: 0 auto;
+  width: 425px;
+  min-height: 90vh;
+
+  .contentHeader{
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+    display: flex;
+    .headDesc{
+      flex: 1;
+      margin: 10px;
+      padding: 10px;
+    }
+    button{
+      border: 0;
+      padding: 2px;
+      width: 15%;
+      background: none;
+      color: #6c757d;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
+
+  .listWrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    padding: 5px;
+
+    a{
+      text-decoration: none;
+      color: #6c757d; 
+    }
+
+    .listItem{
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 5px 1px rgba(0,0,0,0.2);
+      margin: 5px;
+      text-align: center;
+      height: 120px;
+      h1{
+        font-size: 15px;
+        margin-top: 10px;
+      }
+
+      .pokeImg{
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: 425px){
+    width: 100%;
+  }
+}
+}
+
+
+
+@media screen and (max-width: 425px){
+  .content-wrapper{
+    width: 100%;
+  }
+}
